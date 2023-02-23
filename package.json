@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "postinstall": "prisma generate --schema=src/prisma/schema.prisma",
-    "vercel-build": "prisma generate --schema=src/prisma/schema.prisma && prisma migrate deploy --schema=src/prisma/schema.prisma && next build",
-    "prisma:generate": "prisma generate --schema=src/prisma/schema.prisma",
+    "postinstall": "prisma generate",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
