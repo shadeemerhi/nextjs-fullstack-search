@@ -30,13 +30,17 @@ const SearchPage = () => {
     return <Spinner />;
   }
 
+  if (!data?.posts) {
+    return null;
+  }
+
   return (
     <>
       <span className="text-xl">
         Showing results for:{" "}
         <span className="font-semibold">{searchQuery}</span>
       </span>
-      {data?.posts && <Posts posts={data.posts} />}
+      <Posts posts={data.posts} />
     </>
   );
 };
