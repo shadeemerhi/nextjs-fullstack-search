@@ -23,7 +23,8 @@ const SearchPage = () => {
 
   const { data, isLoading } = useSWR(
     `/api/search?q=${encodedSearchQuery}`,
-    fetchPosts
+    fetchPosts,
+    { revalidateOnFocus: false }
   );
 
   if (isLoading) {
