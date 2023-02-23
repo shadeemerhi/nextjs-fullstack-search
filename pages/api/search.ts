@@ -14,6 +14,9 @@ export default async function handler(
         throw new Error("Invalid request");
       }
 
+      /**
+       * Search posts
+       */
       const posts: Array<Post & { author: User }> = await prisma.post.findMany({
         where: {
           OR: [
@@ -35,6 +38,15 @@ export default async function handler(
         },
         include: {
           author: true,
+        },
+      });
+
+      /**
+       * Save search
+       */
+      await prisma.searchQuery.create({
+        data: {
+          query,
         },
       });
 
