@@ -1,12 +1,12 @@
 "use client";
 
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 const SearchInput = () => {
   const search = useSearchParams();
   const [searchQuery, setSearchQuery] = useState<string | null>(
-    search.get("q")
+    search ? search.get("q") : ""
   );
   const router = useRouter();
 
