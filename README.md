@@ -1,4 +1,4 @@
-This is a simple Next.js application I created to demonstrate how to build full stack search. Please follow the below instructions to get the project up and running.
+This is a simple application I created to demonstrate how to build full stack search using Next.js and Prisma. Please follow the below instructions to get the project up and running.
 
 ## Getting Started
 
